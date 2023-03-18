@@ -114,7 +114,6 @@ object functions extends App:
   import u02.Optionals.Option.*
   import u02.Optionals.*
   private object Ex8:
-
     def filter[A](value: Option[A])(predicate: A => Boolean): Option[A] = value match
       case Some(a) if predicate(a) => Some(a)
       case _ => None()
