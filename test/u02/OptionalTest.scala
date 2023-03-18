@@ -3,6 +3,7 @@ package u02
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import u02.Optionals.Option.*
+import ex.functions.{map, filter, fold}
 
 class OptionalTest:
 
