@@ -7,6 +7,7 @@ object functions extends App:
   // Enables test print
   val print: Boolean = true
 
+  // Task 2a, svolto da solo
   private object Ex3:
     def positive(x: Int): String = x match
       case n if n >= 0 => "positive"
@@ -24,6 +25,7 @@ object functions extends App:
     println(Ex3.neg(_ == "")("Prova")) // true
   }
 
+  // Task 2b, svolto da solo
   private object Ex4:
     val p1: Double => Double => Double => Boolean = x => y => z => (x <= y) && (y == z)
     val p2: (Double, Double, Double) => Boolean = (x, y, z) => x <= y && y == z
@@ -37,6 +39,7 @@ object functions extends App:
     println(Ex4.p4(1.0, 2.0, 2.0)) // true
   }
 
+  // Task 2b, svolto da solo
   private object Ex5:
     def compose(f: Int => Int, g: Int => Int): Int => Int = compose[Int, Int, Int](f, g)
     @targetName("generic compose")
@@ -47,6 +50,7 @@ object functions extends App:
     println(Ex5.compose[Int, String, Boolean](_ == "", _ + "")(5)) // false
   }
 
+  // Task 3, svolto da solo
   private object Ex6:
     @annotation.tailrec
     def gcd(a: Int, b: Int): Int =
@@ -61,6 +65,7 @@ object functions extends App:
     println(Ex6.gcd(14, 7)) // 7
   }
 
+  // Task 4, svolto da solo
   private object Ex7:
     enum Shape:
       case Square(ldPoint: (Double, Double), side: Double)
@@ -105,6 +110,7 @@ object functions extends App:
     println(Ex7.contains(Ex7.Shape.Circle((2, 2), 4), (-4, 0))) // false
   }
 
+  // Task 5, svolto da solo
   import u02.Optionals.Option.*
   import u02.Optionals.*
   private object Ex8:
